@@ -13,3 +13,5 @@ pytest
 click
 pyarrow
 sphinx
+click
+atoma

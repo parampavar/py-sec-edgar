@@ -1,0 +1,275 @@
+<?xml version="1.0" ?>
+<informationTable xsi:schemaLocation="http://www.sec.gov/edgar/document/thirteenf/informationtable eis_13FDocument.xsd" xmlns="http://www.sec.gov/edgar/document/thirteenf/informationtable" xmlns:n1="http://www.sec.gov/edgar/document/thirteenf/informationtable" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <infoTable>
+    <nameOfIssuer>AKAMAI TECHNOLOGIES INC</nameOfIssuer>
+    <titleOfClass>NOTE  0.125% 5/0</titleOfClass>
+    <cusip>00971TAJ0</cusip>
+    <value>10769</value>
+    <shrsOrPrnAmt>
+      <sshPrnamt>8701000</sshPrnamt>
+      <sshPrnamtType>SH</sshPrnamtType>
+    </shrsOrPrnAmt>
+    <investmentDiscretion>SOLE</investmentDiscretion>
+    <votingAuthority>
+      <Sole>0</Sole>
+      <Shared>0</Shared>
+      <None>8701000</None>
+    </votingAuthority>
+  </infoTable>
+  <infoTable>
+    <nameOfIssuer>WELLPOINT INC</nameOfIssuer>
+    <titleOfClass>NOTE  2.750%10/1</titleOfClass>
+    <cusip>94973VBG1</cusip>
+    <value>11191</value>
+    <shrsOrPrnAmt>
+      <sshPrnamt>2498000</sshPrnamt>
+      <sshPrnamtType>SH</sshPrnamtType>
+    </shrsOrPrnAmt>
+    <investmentDiscretion>SOLE</investmentDiscretion>
+    <votingAuthority>
+      <Sole>0</Sole>
+      <Shared>0</Shared>
+      <None>2498000</None>
+    </votingAuthority>
+  </infoTable>
+  <infoTable>
+    <nameOfIssuer>ARES CAPITAL CORP</nameOfIssuer>
+    <titleOfClass>NOTE  3.750% 2/0</titleOfClass>
+    <cusip>04010LAT0</cusip>
+    <value>23306</value>
+    <shrsOrPrnAmt>
+      <sshPrnamt>22738000</sshPrnamt>
+      <sshPrnamtType>SH</sshPrnamtType>
+    </shrsOrPrnAmt>
+    <investmentDiscretion>SOLE</investmentDiscretion>
+    <votingAuthority>
+      <Sole>0</Sole>
+      <Shared>0</Shared>
+      <None>22738000</None>
+    </votingAuthority>
+  </infoTable>
+  <infoTable>
+    <nameOfIssuer>PRICELINE GRP INC</nameOfIssuer>
+    <titleOfClass>NOTE  0.900% 9/1</titleOfClass>
+    <cusip>741503AX4</cusip>
+    <value>21250</value>
+    <shrsOrPrnAmt>
+      <sshPrnamt>18334000</sshPrnamt>
+      <sshPrnamtType>SH</sshPrnamtType>
+    </shrsOrPrnAmt>
+    <investmentDiscretion>SOLE</investmentDiscretion>
+    <votingAuthority>
+      <Sole>0</Sole>
+      <Shared>0</Shared>
+      <None>18334000</None>
+    </votingAuthority>
+  </infoTable>
+  <infoTable>
+    <nameOfIssuer>EURONET WORLDWIDE INC</nameOfIssuer>
+    <titleOfClass>NOTE  0.750% 3/1</titleOfClass>
+    <cusip>298736AL3</cusip>
+    <value>20087</value>
+    <shrsOrPrnAmt>
+      <sshPrnamt>17770000</sshPrnamt>
+      <sshPrnamtType>SH</sshPrnamtType>
+    </shrsOrPrnAmt>
+    <investmentDiscretion>SOLE</investmentDiscretion>
+    <votingAuthority>
+      <Sole>0</Sole>
+      <Shared>0</Shared>
+      <None>17770000</None>
+    </votingAuthority>
+  </infoTable>
+  <infoTable>
+    <nameOfIssuer>FORTIVE CORP</nameOfIssuer>
+    <titleOfClass>NOTE  0.875% 2/1</titleOfClass>
+    <cusip>34959JAK4</cusip>
+    <value>23589</value>
+    <shrsOrPrnAmt>
+      <sshPrnamt>22931000</sshPrnamt>
+      <sshPrnamtType>SH</sshPrnamtType>
+    </shrsOrPrnAmt>
+    <investmentDiscretion>SOLE</investmentDiscretion>
+    <votingAuthority>
+      <Sole>0</Sole>
+      <Shared>0</Shared>
+      <None>22931000</None>
+    </votingAuthority>
+  </infoTable>
+  <infoTable>
+    <nameOfIssuer>HERCULES CAPITAL INC</nameOfIssuer>
+    <titleOfClass>DBCV  4.375% 2/0</titleOfClass>
+    <cusip>427096AF9</cusip>
+    <value>12251</value>
+    <shrsOrPrnAmt>
+      <sshPrnamt>11932000</sshPrnamt>
+      <sshPrnamtType>SH</sshPrnamtType>
+    </shrsOrPrnAmt>
+    <investmentDiscretion>SOLE</investmentDiscretion>
+    <votingAuthority>
+      <Sole>0</Sole>
+      <Shared>0</Shared>
+      <None>11932000</None>
+    </votingAuthority>
+  </infoTable>
+  <infoTable>
+    <nameOfIssuer>ILLUMINA INC</nameOfIssuer>
+    <titleOfClass>NOTE  0.500% 6/1</titleOfClass>
+    <cusip>452327AH2</cusip>
+    <value>11862</value>
+    <shrsOrPrnAmt>
+      <sshPrnamt>8117000</sshPrnamt>
+      <sshPrnamtType>SH</sshPrnamtType>
+    </shrsOrPrnAmt>
+    <investmentDiscretion>SOLE</investmentDiscretion>
+    <votingAuthority>
+      <Sole>0</Sole>
+      <Shared>0</Shared>
+      <None>8117000</None>
+    </votingAuthority>
+  </infoTable>
+  <infoTable>
+    <nameOfIssuer>ILLUMINA INC</nameOfIssuer>
+    <titleOfClass>NOTE         8/1</titleOfClass>
+    <cusip>452327AK5</cusip>
+    <value>8554</value>
+    <shrsOrPrnAmt>
+      <sshPrnamt>7589000</sshPrnamt>
+      <sshPrnamtType>SH</sshPrnamtType>
+    </shrsOrPrnAmt>
+    <investmentDiscretion>SOLE</investmentDiscretion>
+    <votingAuthority>
+      <Sole>0</Sole>
+      <Shared>0</Shared>
+      <None>7589000</None>
+    </votingAuthority>
+  </infoTable>
+  <infoTable>
+    <nameOfIssuer>MACQUARIE INFRASTRUCTURE COR</nameOfIssuer>
+    <titleOfClass>NOTE  2.000%10/0</titleOfClass>
+    <cusip>55608BAB1</cusip>
+    <value>8087</value>
+    <shrsOrPrnAmt>
+      <sshPrnamt>8128000</sshPrnamt>
+      <sshPrnamtType>SH</sshPrnamtType>
+    </shrsOrPrnAmt>
+    <investmentDiscretion>SOLE</investmentDiscretion>
+    <votingAuthority>
+      <Sole>0</Sole>
+      <Shared>0</Shared>
+      <None>8128000</None>
+    </votingAuthority>
+  </infoTable>
+  <infoTable>
+    <nameOfIssuer>PROSPECT CAP CORP</nameOfIssuer>
+    <titleOfClass>NOTE  4.950% 7/1</titleOfClass>
+    <cusip>74348TAR3</cusip>
+    <value>24785</value>
+    <shrsOrPrnAmt>
+      <sshPrnamt>24212000</sshPrnamt>
+      <sshPrnamtType>SH</sshPrnamtType>
+    </shrsOrPrnAmt>
+    <investmentDiscretion>SOLE</investmentDiscretion>
+    <votingAuthority>
+      <Sole>2395000</Sole>
+      <Shared>0</Shared>
+      <None>21817000</None>
+    </votingAuthority>
+  </infoTable>
+  <infoTable>
+    <nameOfIssuer>SOUTHWEST AIRLS CO</nameOfIssuer>
+    <titleOfClass>NOTE  1.250% 5/0</titleOfClass>
+    <cusip>844741BG2</cusip>
+    <value>25197</value>
+    <shrsOrPrnAmt>
+      <sshPrnamt>17347000</sshPrnamt>
+      <sshPrnamtType>SH</sshPrnamtType>
+    </shrsOrPrnAmt>
+    <investmentDiscretion>SOLE</investmentDiscretion>
+    <votingAuthority>
+      <Sole>0</Sole>
+      <Shared>0</Shared>
+      <None>17347000</None>
+    </votingAuthority>
+  </infoTable>
+  <infoTable>
+    <nameOfIssuer>SPIRIT RLTY CAP INC NEW</nameOfIssuer>
+    <titleOfClass>NOTE  3.750% 5/1</titleOfClass>
+    <cusip>84860WAB8</cusip>
+    <value>3411</value>
+    <shrsOrPrnAmt>
+      <sshPrnamt>3365000</sshPrnamt>
+      <sshPrnamtType>SH</sshPrnamtType>
+    </shrsOrPrnAmt>
+    <investmentDiscretion>SOLE</investmentDiscretion>
+    <votingAuthority>
+      <Sole>0</Sole>
+      <Shared>0</Shared>
+      <None>3365000</None>
+    </votingAuthority>
+  </infoTable>
+  <infoTable>
+    <nameOfIssuer>TEVA PHARMACEUTICAL FIN LLC</nameOfIssuer>
+    <titleOfClass>DBCV  0.250% 2/0</titleOfClass>
+    <cusip>88163VAE9</cusip>
+    <value>14701</value>
+    <shrsOrPrnAmt>
+      <sshPrnamt>14775000</sshPrnamt>
+      <sshPrnamtType>SH</sshPrnamtType>
+    </shrsOrPrnAmt>
+    <investmentDiscretion>SOLE</investmentDiscretion>
+    <votingAuthority>
+      <Sole>2056000</Sole>
+      <Shared>0</Shared>
+      <None>12719000</None>
+    </votingAuthority>
+  </infoTable>
+  <infoTable>
+    <nameOfIssuer>TPG SPECIALTY LENDING INC</nameOfIssuer>
+    <titleOfClass>NOTE  4.500% 8/0</titleOfClass>
+    <cusip>87265KAD4</cusip>
+    <value>22199</value>
+    <shrsOrPrnAmt>
+      <sshPrnamt>20583000</sshPrnamt>
+      <sshPrnamtType>SH</sshPrnamtType>
+    </shrsOrPrnAmt>
+    <investmentDiscretion>SOLE</investmentDiscretion>
+    <votingAuthority>
+      <Sole>0</Sole>
+      <Shared>0</Shared>
+      <None>20583000</None>
+    </votingAuthority>
+  </infoTable>
+  <infoTable>
+    <nameOfIssuer>TWITTER INC</nameOfIssuer>
+    <titleOfClass>NOTE  1.000% 9/1</titleOfClass>
+    <cusip>90184LAD4</cusip>
+    <value>2732</value>
+    <shrsOrPrnAmt>
+      <sshPrnamt>2684000</sshPrnamt>
+      <sshPrnamtType>SH</sshPrnamtType>
+    </shrsOrPrnAmt>
+    <investmentDiscretion>SOLE</investmentDiscretion>
+    <votingAuthority>
+      <Sole>1555000</Sole>
+      <Shared>0</Shared>
+      <None>1129000</None>
+    </votingAuthority>
+  </infoTable>
+  <infoTable>
+    <nameOfIssuer>WESTERN DIGITAL CORP.</nameOfIssuer>
+    <titleOfClass>NOTE  1.500% 2/0</titleOfClass>
+    <cusip>958102AP0</cusip>
+    <value>28647</value>
+    <shrsOrPrnAmt>
+      <sshPrnamt>28821000</sshPrnamt>
+      <sshPrnamtType>SH</sshPrnamtType>
+    </shrsOrPrnAmt>
+    <investmentDiscretion>SOLE</investmentDiscretion>
+    <votingAuthority>
+      <Sole>3309000</Sole>
+      <Shared>0</Shared>
+      <None>25512000</None>
+    </votingAuthority>
+  </infoTable>
+</informationTable>

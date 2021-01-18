@@ -1,0 +1,38 @@
+{
+    "directory": {
+        "item": [
+            {
+                "last-modified": "2021-01-15 16:32:39",
+                "name": "0001729049-21-000001-index-headers.html",
+                "type": "text.gif",
+                "size": ""
+            },
+            {
+                "last-modified": "2021-01-15 16:32:39",
+                "name": "0001729049-21-000001-index.html",
+                "type": "text.gif",
+                "size": ""
+            },
+            {
+                "last-modified": "2021-01-15 16:32:39",
+                "name": "0001729049-21-000001.txt",
+                "type": "text.gif",
+                "size": ""
+            },
+            {
+                "last-modified": "2021-01-15 16:32:39",
+                "name": "Pegasus4q20.xml",
+                "type": "text.gif",
+                "size": "37550"
+            },
+            {
+                "last-modified": "2021-01-15 16:32:39",
+                "name": "primary_doc.xml",
+                "type": "text.gif",
+                "size": "1942"
+            }
+        ],
+        "name": "\/Archives\/edgar\/data\/1729049\/000172904921000001",
+        "parent-dir": "\/Archives\/edgar\/data\/1729049"
+    }
+}

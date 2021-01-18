@@ -7,7 +7,8 @@ import pandas as pd
 class BaseConfig:
 
     # top level folders
-    ROOT_DIR = os.path.abspath(os.sep)
+    CURRENT_DIR = os.getcwd()
+    ROOT_DIR = os.path.abspath(os.path.join(CURRENT_DIR, "testdata"))
     BASE_DIR = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
     APP_DIR = os.path.abspath(os.path.dirname(__file__))
 
@@ -25,12 +26,18 @@ class BaseConfig:
     FULL_INDEX_DATA_DIR = os.path.join(EDGAR_DATA_DIR, "full-index")
     DAILY_INDEX_DATA_DIR = os.path.join(EDGAR_DATA_DIR, "daily-index")
     FILING_DATA_DIR = os.path.join(EDGAR_DATA_DIR, "filings")
+
+    SEC_REPORT_13HR_DIR = os.path.join(SEC_DATA_DIR, "Report", "13HR")
+    SEC_REPORT_13HR_RSS_DIR = os.path.join(SEC_DATA_DIR, "Report", "13HR", "RSS")
+    SEC_REPORT_13HR_FILING_DIR = os.path.join(SEC_DATA_DIR, "Report", "13HR", "FILINGS")
+    SEC_REPORT_13HR_FILING_CIK_DIR = os.path.join(SEC_DATA_DIR, "Report", "13HR", "FILINGS", "CIK")
     # used as template
     TXT_FILING_DATA_DIR = os.path.join(EDGAR_DATA_DIR, "data", "CIK", "FOLDER")
 
     # create data directories
     dirs_all = [SEC_DATA_DIR, DATA_DIR, EDGAR_DATA_DIR,
-                MONTHLY_DATA_DIR, FULL_INDEX_DATA_DIR, DAILY_INDEX_DATA_DIR]
+                MONTHLY_DATA_DIR, FULL_INDEX_DATA_DIR, DAILY_INDEX_DATA_DIR,
+                 SEC_REPORT_13HR_DIR, SEC_REPORT_13HR_RSS_DIR, SEC_REPORT_13HR_FILING_DIR, SEC_REPORT_13HR_FILING_CIK_DIR]
 
     print("Checking for Output BaseConfig")
 
@@ -48,6 +55,9 @@ class BaseConfig:
     edgar_full_index = urljoin(edgar_Archives_url, 'edgar/full-index/')
     edgar_full_master_url = urljoin(edgar_full_index, 'master.idx')
     edgar_monthly_index = urljoin(edgar_Archives_url, 'edgar/monthly/')
+    sec_report_url = r'https://sec.report/'
+    sec_report_13HR_url = urljoin(sec_report_url, 'Form/13F-HR')
+    sec_report_13HR_rss_url = urljoin(sec_report_url, 'Form/13F-HR.rss')
 
     # important dates
     sec_dates = pd.date_range(
