@@ -33,7 +33,7 @@ def main():
     i = 0    
     for item in rss_content.items:
         i = i + 1
-        if i < 3 :
+        if i < 2 :
             cik_13hr_url = item.link
             cik_13hr_json_url = urljoin(cik_13hr_url, 'index.json')
             cik = urlparse(cik_13hr_url).path.split("/")[2].split('-')[0]
@@ -67,9 +67,30 @@ def main():
                     cik_index_attachment_file = os.path.join(cik_dir, attachment['name'])
                     if not os.path.exists(cik_index_attachment_file): 
                         attachment_file = requests.get(urljoin(cik_13hr_url, attachment['name']), headers=headers, proxies=proxies) 
-                
-                        with open(cik_index_attachment_file, 'wb') as foutput:
-                            foutput.write(attachment_file.content)
+                        attachment_file_content = attachment_file.content
+                        with open(cik_index_attachment_file, 'w') as foutput:
+                            foutput.write(attachment_file_content.decode("utf-8") )
+                    else:
+                        with open(cik_index_attachment_file, 'r') as foutput:
+                            attachment_file_content = foutput.read()
+                    
+                    if attachment['name'] == "primary_doc.xml":
+                        from lxml import etree as etree_lxml
+                        with open(cik_index_attachment_file, 'r') as foutput:
+                            attachment_file_content = etree_lxml.parse(foutput)
+                        primary_doc = attachment_file_content.getroot()
+
+
+                        
+                        for chd in primary_doc.getchildren():
+                            print(chd.tag)
+                            for ch in chd.getchildren():
+                                print(ch.tag)
+                        ns = {"ff": "http://www.sec.gov/edgar/thirteenffiler"}
+
+                        print(primary_doc.xpath('/headerData', namespaces=ns))
+
+
                     
 
     # py_sec_edgar.feeds.full_index.update_full_index_feed(skip_if_exists=True)
