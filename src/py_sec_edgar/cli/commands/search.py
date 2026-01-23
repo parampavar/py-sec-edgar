@@ -1,21 +1,17 @@
 """SEC Filing Search and Analysis Commands
 
 Professional command-line interface for SEC EDGAR filing search, download, and
-AI-powered analysis. Provides intuitive access to the comprehensive py-sec-edgar
+analysis. Provides intuitive access to the comprehensive py-sec-edgar
 search engine with rich console output and progress tracking.
 
 Key Features:
     🔍 **Smart Search**: Ticker-based filing discovery with fuzzy matching
     📥 **Intelligent Downloads**: Automatic filing retrieval with progress tracking
-    🤖 **AI Analysis**: OpenAI-powered filing analysis (when API key configured)
-    💬 **Interactive Chat**: Conversational analysis of downloaded filings
     📊 **Rich Output**: Professional console interface with tables and progress bars
     🛡️ **Error Handling**: Graceful error handling with helpful user guidance
 
 Commands:
     search filings: Primary filing search and download interface
-    search analyze: AI-powered analysis of downloaded filings
-    search interactive: Start conversational AI session for filing analysis
 
 Examples:
     Basic filing search:
@@ -23,24 +19,17 @@ Examples:
     py-sec-edgar search filings --ticker AAPL --form-type 10-K --limit 5
     ```
 
-    Download and analyze:
+    Download filings:
     ```bash
-    py-sec-edgar search filings --ticker MSFT --download --chat
-    ```
-
-    AI analysis of specific filing:
-    ```bash
-    py-sec-edgar search analyze --filing-path ./downloads/filing.txt --question "What are the main risks?"
+    py-sec-edgar search filings --ticker MSFT --download
     ```
 
 Dependencies:
-    - OpenAI API key required for AI features (set OPENAI_API_KEY environment variable)
     - Rich console library for enhanced terminal output
     - Search engine data files (run `py-sec-edgar feeds update-full-index` if missing)
 
 See Also:
     search_engine: Core filing search functionality
-    ai_assistant: AI integration framework (when available)
     core.downloader: Filing download management
 """
 
@@ -51,8 +40,6 @@ from datetime import datetime
 
 import click
 from rich.console import Console
-from rich.markdown import Markdown
-from rich.panel import Panel
 from rich.progress import Progress, SpinnerColumn, TextColumn
 from rich.table import Table
 
@@ -61,31 +48,6 @@ from py_sec_edgar.search_engine import (
     FilingSearchEngine,
     FilingSearchError,
 )
-
-# AI functionality is available when OpenAI API key is configured
-AI_AVAILABLE = bool(os.getenv("OPENAI_API_KEY"))
-
-
-class AIAnalysisError(Exception):
-    """Exception raised when AI analysis operations fail."""
-
-    pass
-
-
-class FilingAIAssistant:
-    """Placeholder for AI assistant functionality"""
-
-    def __init__(self, openai_api_key: str = None):
-        self.api_key = openai_api_key
-
-    async def analyze_filing(self, content: str, question: str = None) -> str:
-        return "AI analysis feature is not yet implemented. Please check back in future releases."
-
-
-async def analyze_filing_content(content: str, question: str = None) -> str:
-    """Placeholder for AI content analysis"""
-    return "AI analysis feature is not yet implemented. Please check back in future releases."
-
 
 console = Console()
 
@@ -1027,139 +989,6 @@ def _suggest_historical_data_download(
         console.print(
             "[dim]🚀 Quick setup for extensive analysis: py-sec-edgar feeds update-full-index --last-10-years[/dim]"
         )
-
-
-async def _analyze_filing(filing_info, filing_content: str, question: str):
-    """Analyze filing with AI"""
-
-    if not AI_AVAILABLE:
-        console.print(
-            "[red]❌ AI analysis not available. Install with: pip install openai[/red]"
-        )
-        return
-
-    # Check for OpenAI API key
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        console.print(
-            "[red]❌ OpenAI API key required. Set OPENAI_API_KEY environment variable.[/red]"
-        )
-        return
-
-    try:
-        with Progress(
-            SpinnerColumn(),
-            TextColumn("[progress.description]{task.description}"),
-            console=console,
-        ) as progress:
-            task = progress.add_task("Analyzing filing with AI...", total=None)
-
-            response = await analyze_filing_content(
-                filing_info=filing_info,
-                filing_content=filing_content,
-                question=question,
-                openai_api_key=api_key,
-            )
-
-            progress.update(task, completed=1)
-
-        # Display analysis result
-        console.print("\n" + "=" * 80)
-        console.print(f"[bold cyan]🤖 AI Analysis: {question}[/bold cyan]")
-        console.print("=" * 80)
-
-        # Use markdown rendering for better formatting
-        console.print(Markdown(response))
-        console.print("\n" + "=" * 80)
-
-    except AIAnalysisError as e:
-        console.print(f"[red]❌ AI Analysis Error: {e}[/red]")
-    except Exception as e:
-        console.print(f"[red]❌ Analysis Failed: {e}[/red]")
-
-
-async def _start_chat_session(filing_info, filing_content: str):
-    """Start interactive chat session"""
-
-    if not AI_AVAILABLE:
-        console.print(
-            "[red]❌ AI chat not available. Install with: pip install openai[/red]"
-        )
-        return
-
-    # Check for OpenAI API key
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        console.print(
-            "[red]❌ OpenAI API key required. Set OPENAI_API_KEY environment variable.[/red]"
-        )
-        return
-
-    try:
-        # Initialize AI assistant
-        assistant = FilingAIAssistant(openai_api_key=api_key)
-
-        # Start chat session
-        welcome = await assistant.start_chat_session(filing_info, filing_content)
-
-        # Display welcome message
-        console.print(
-            Panel(
-                welcome,
-                title="[bold cyan]🤖 SEC Filing AI Assistant[/bold cyan]",
-                border_style="cyan",
-            )
-        )
-
-        # Interactive chat loop
-        console.print("\n[dim]Type your questions below. Press Ctrl+C to exit.[/dim]\n")
-
-        while True:
-            try:
-                # Get user input
-                user_input = console.input(
-                    "[bold green]❓ Your question: [/bold green]"
-                ).strip()
-
-                if not user_input:
-                    continue
-
-                # Exit commands
-                if user_input.lower() in ["exit", "quit", "bye"]:
-                    console.print("[cyan]👋 Goodbye![/cyan]")
-                    break
-
-                # Get AI response
-                with Progress(
-                    SpinnerColumn(),
-                    TextColumn("[progress.description]{task.description}"),
-                    console=console,
-                ) as progress:
-                    task = progress.add_task("AI is thinking...", total=None)
-
-                    response = await assistant.chat(user_input)
-
-                    progress.update(task, completed=1)
-
-                # Display response
-                console.print("\n[bold cyan]🤖 AI Response:[/bold cyan]")
-                console.print(Markdown(response))
-                console.print()
-
-            except KeyboardInterrupt:
-                console.print("\n[cyan]👋 Chat session ended.[/cyan]")
-                break
-            except EOFError:
-                console.print("\n[cyan]👋 Chat session ended.[/cyan]")
-                break
-            except Exception as e:
-                console.print(f"[red]❌ Chat Error: {e}[/red]")
-                continue
-
-    except AIAnalysisError as e:
-        console.print(f"[red]❌ AI Error: {e}[/red]")
-    except Exception as e:
-        console.print(f"[red]❌ Chat initialization failed: {e}[/red]")
 
 
 @search_group.command()
